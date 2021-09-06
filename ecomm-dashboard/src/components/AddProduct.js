@@ -3,7 +3,9 @@ import React from 'react'
 function AddProduct() {
     return (
         <>
-          <h1>Add Product Page</h1>  
+            <div className="container-fluid">
+                <h1>Add Product Page</h1>
+            </div>
         </>
     )
 }
