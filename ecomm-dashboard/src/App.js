@@ -1,14 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
-import {Button} from 'react-bootstrap';
+import Header from './components/Header';
+import Register from './components/Register';
+import Login from './components/Login';
+import AddProduct from './components/AddProduct';
+import UpdateProduct from './components/UpdateProduct';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 function App() {
   return (
     <>    
       <div className="App">
-        <h1>Eommerce Project</h1><br />
-        <button>Normal Button</button>
-        <Button>React-Bootstrap Button</Button>
+        <BrowserRouter>
+          <Header />
+          <Route path="/add">
+            <AddProduct />
+          </Route>
+          <Route path="/update">
+            <UpdateProduct />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+        </BrowserRouter>
       </div>
     </>
   );
